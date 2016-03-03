@@ -1,35 +1,24 @@
-all: n b a d b+a b+d s b+s
+all: 1 2 3 4 5 6 7
 
-n:
-	@echo n
-	node_modules/.bin/browserify main.js -o bundle-n.js -d
+1:
+	node_modules/.bin/browserify main.js -o 1-browserify.js -d
 
-b:
-	@echo b
-	node_modules/.bin/browserify -t babelify main.js -o bundle-b.js -d
+2:
+	node_modules/.bin/browserify -t coffeeify main.coffee -o 2-browserify-coffeeify.js -d
 
-a:
-	@echo a
-	node_modules/.bin/browserify -t unassertify main.js -o bundle-a.js -d
+3:
+	node_modules/.bin/browserify -t undebuggify main.js -o 3-browserify-undebuggify.js -d
 
-d:
-	@echo d
-	node_modules/.bin/browserify -t undebuggify main.js -o bundle-d.js -d
+4:
+	node_modules/.bin/browserify -g uglifyify main.js -o 4-browserify-uglifyify.js -d
 
-b+a:
-	@echo b+a
-	node_modules/.bin/browserify -t babelify -t unassertify main.js -o bundle-b+a.js -d
+5:
+	node_modules/.bin/browserify -t coffeeify -t undebuggify main.coffee -o 5-browserify-coffeeify-undebuggify.js -d
 
-b+d:
-	@echo b+d
-	node_modules/.bin/browserify -t babelify -t undebuggify main.js -o bundle-b+d.js -d
+6:
+	node_modules/.bin/browserify -t coffeeify -g uglifyify main.coffee -o 6-browserify-coffeeify-uglifyify.js -d
 
-# s:
-#  	@echo
-#  	node_modules/.bin/browserify -t ./standalone/throughify main.js -o standalone/bundle-s.js -d
-#
-# b+s:
-#  	@echo b+s
-#  	node_modules/.bin/browserify -t babelify -t ./standalone/throughify main.js -o standalone/bundle-b+s.js -d
+7:
+	node_modules/.bin/browserify -t undebuggify -g uglifyify main.js -o 7-browserify-undebuggify-uglifyify.js -d
 
-.PHONY: n b a d b+a b+d s b+s
+.PHONY: 1 2 3 4 5 6 7
