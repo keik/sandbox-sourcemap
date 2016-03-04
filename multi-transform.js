@@ -93,7 +93,7 @@ var mapComment = convert.fromJSON(gen_goal.map.toString()).toComment()
 console.log(gen_goal.map.toString());
 console.log(mapComment);
 
-fs.writeFileSync('./multi-transform-t-goal.js', gen_goal.code1 + '\n' + mapComment)
+fs.writeFileSync('./multi-transform-t-goal.js', gen_goal.code + '\n' + mapComment)
 // play=======================================================
 
 console.log();

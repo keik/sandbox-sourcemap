@@ -1,2 +1,5 @@
-undefined
+aaaa = 1;
+aaaa = 1;
+aaaa = 1;
+aaaa = 1;
 //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4vbXVsdGktdHJhbnNmb3JtLXQtZHVtbXkuanMiXSwibmFtZXMiOlsiYWFhYSJdLCJtYXBwaW5ncyI6IkFBQUFBLElBQUEsR0FBSSxDQUFKO0FBQUFBLElBQUEsR0FBSSxDQUFKO0FBQUFBLElBQUEsR0FBSSxDQUFKO0FBQUFBLElBQUEsR0FBSSxDQUFKIiwic291cmNlc0NvbnRlbnQiOlsiYSA9IDFcbiJdfQ==
