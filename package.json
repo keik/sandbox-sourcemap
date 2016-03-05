@@ -19,6 +19,8 @@
     "esprima": "^2.7.2",
     "estraverse": "^4.1.1",
     "source-map": "^0.5.3",
+    "source-map-resolve": "^0.5.0",
+    "tape": "^4.5.0",
     "uglifyify": "^3.0.1",
     "unassertify": "^2.0.3",
     "undebuggify": "^0.1.1"
