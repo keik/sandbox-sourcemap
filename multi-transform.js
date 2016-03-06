@@ -132,7 +132,6 @@ smc_of_gen3.eachMapping((m, idx) => {
   console.log('  origPos  ', `{${origPosInGen2.line},${origPosInGen2.column}}`);
 })
 
-
 console.log();
 console.log();
 console.log();
@@ -163,14 +162,8 @@ function mergeMap(oldMap, newMap) {
       name: m.name
     })
   })
-  return mergedMapGenerator.toString()
+  mergedMapGenerator.setSourceContent('multi-transform-t-dummy.js', gen2MapFromComment.sourcesContent[0])
+  return JSON.parse(mergedMapGenerator.toString())
 }
-
-console.log(gen2MapFromComment.sources);
-console.log(convert.fromObject(mergedMap).setProperty('sources', gen2MapFromComment.sources));
-console.log(gen_goal.map.toString());
-console.log(mergedMap.toString());
-// console.log(convert.fromJSON(gen_goal.map.toString()).toComment());
-// console.log(convert.fromObject(mergedMap).toComment());
 
 fs.writeFileSync('./multi-transform-t-last.js', gen3.code + '\n' + convert.fromObject(mergedMap).toComment())
